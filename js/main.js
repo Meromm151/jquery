@@ -7,9 +7,9 @@ $(".the-bar i").on("click", ()=>{
   $(".side-bar .the-bar").animate({ width: 'toggle'},300);
 });
 
-$(".the-bar li a").on("click", ()=>{
+$(".the-bar li a").on("click", (e)=>{
 
-let scrollT = $(`#${this.href.split("#")[1]}`)
+let scrollT = $(`#${e.target.href.split("#")[1]}`)
 $('html, body').animate({ scrollTop: scrollT["0"].offsetTop},1500)
 });
 
